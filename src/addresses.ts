@@ -145,6 +145,16 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x8357227D4eDc78991Db6FDB9bD6ADE250536dE1d'
 }
 
+const AIRDAO_TEST_ADDRESSES: ChainAddresses = {
+    v3CoreFactoryAddress: '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
+    multicallAddress: '0xe7Ecbbe77773ed34EB5A8bf480F50F9Ee10a446B',
+    quoterAddress: '0x6378e1f94b3A09B493B857834Da9a4DC1Ff64923',
+    v3MigratorAddress: '0xADaDDDa32bcb38F9c2863c303886c971B89e4cD4',
+    nonfungiblePositionManagerAddress: '0x5FDF838487F2148a629eFB1B420F692c20FC69c0',
+    tickLensAddress: '0x01873090E888bFEc51DB4716A985C5A8cC5F09c3',
+    swapRouter02Address: '0xb9D2678e684F4B6aF104D7BD9e1CDA4A36AdeA91'
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -160,7 +170,8 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.SEPOLIA]: SEPOLIA_ADDRESSES,
   [ChainId.AVALANCHE]: AVALANCHE_ADDRESSES,
   [ChainId.BASE]: BASE_ADDRESSES,
-  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES
+  [ChainId.BASE_GOERLI]: BASE_GOERLI_ADDRESSES,
+  [ChainId.AIRDAO_TEST]: AIRDAO_TEST_ADDRESSES
 }
 
 /* V3 Contract Addresses */
@@ -263,6 +274,9 @@ export const MIXED_ROUTE_QUOTER_V1_ADDRESSES: AddressMap = SUPPORTED_CHAINS.redu
 export const SWAP_ROUTER_02_ADDRESSES = (chainId: number) => {
   if (chainId == ChainId.BNB) {
     return CHAIN_TO_ADDRESSES_MAP[chainId].swapRouter02Address
+  }
+  if (chainId == ChainId.AIRDAO_TEST) {
+      return CHAIN_TO_ADDRESSES_MAP[chainId].swapRouter02Address
   }
   return '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45'
 }
