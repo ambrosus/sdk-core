@@ -146,13 +146,13 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
 }
 
 const AIRDAO_TEST_ADDRESSES: ChainAddresses = {
-    v3CoreFactoryAddress: '0x6bA4F5d2bA8427621f9ab55c6C71504F74A79176',
-    multicallAddress: '0x939362e616DabEb19da923B8C8Fffcf2b8d3eca4',
-    quoterAddress: '0xb9D2678e684F4B6aF104D7BD9e1CDA4A36AdeA91',
-    v3MigratorAddress: '0xd621D9903d2f77b35C808eFD6bC65AAF324060DD',
-    nonfungiblePositionManagerAddress: '0xADaDDDa32bcb38F9c2863c303886c971B89e4cD4',
-    tickLensAddress: '0x8631AF99fB2A4aCaffF6Af7C6c5A696ADf163c2a',
-    swapRouter02Address: '0xD3FeB6dCdeA02ecD1FA5127535D2b624eE48b843'
+  v3CoreFactoryAddress: '0x6bA4F5d2bA8427621f9ab55c6C71504F74A79176',
+  multicallAddress: '0x939362e616DabEb19da923B8C8Fffcf2b8d3eca4',
+  quoterAddress: '0xb9D2678e684F4B6aF104D7BD9e1CDA4A36AdeA91',
+  v3MigratorAddress: '0xd621D9903d2f77b35C808eFD6bC65AAF324060DD',
+  nonfungiblePositionManagerAddress: '0xADaDDDa32bcb38F9c2863c303886c971B89e4cD4',
+  tickLensAddress: '0x8631AF99fB2A4aCaffF6Af7C6c5A696ADf163c2a',
+  swapRouter02Address: '0xD3FeB6dCdeA02ecD1FA5127535D2b624eE48b843'
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
@@ -276,7 +276,7 @@ export const SWAP_ROUTER_02_ADDRESSES = (chainId: number) => {
     return CHAIN_TO_ADDRESSES_MAP[chainId].swapRouter02Address
   }
   if (chainId == ChainId.AIRDAO_TEST) {
-      return CHAIN_TO_ADDRESSES_MAP[chainId].swapRouter02Address
+    return CHAIN_TO_ADDRESSES_MAP[chainId].swapRouter02Address
   }
   return '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45'
 }
